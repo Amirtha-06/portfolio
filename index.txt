@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Amirtha Varshini Portfolio</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #050816;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+
+    nav {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: #c084fc;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav-links a {
+      color: #d1d5db;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #c084fc;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 120px 40px 80px;
+      background: linear-gradient(to bottom right, #1e1b4b, #050816, #3b0764);
+      text-align: center;
+    }
+
+    .hero-container {
+      max-width: 1000px;
+    }
+
+    .tag {
+      color: #c084fc;
+      letter-spacing: 4px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      font-size: 14px;
+    }
+
+    .hero h1 {
+      font-size: 75px;
+      margin-bottom: 25px;
+      line-height: 1.1;
+    }
+
+    .gradient-text {
+      background: linear-gradient(to right, #c084fc, #ec4899);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      font-size: 22px;
+      color: #d1d5db;
+      line-height: 1.8;
+      margin-bottom: 40px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 15px 30px;
+      border-radius: 16px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn-primary {
+      background: linear-gradient(to right, #a855f7, #ec4899);
+    }
+
+    .btn-primary:hover {
+      transform: scale(1.05);
+    }
+
+    .btn-outline {
+      border: 1px solid gray;
+    }
+
+    .btn-outline:hover {
+      background: white;
+      color: black;
+    }
+
+    section {
+      padding: 100px 40px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 48px;
+      margin-bottom: 70px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 35px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 30px;
+      padding: 35px;
+      backdrop-filter: blur(10px);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .card h3 {
+      font-size: 25px;
+      margin-bottom: 15px;
+    }
+
+    .card p {
+      color: #d1d5db;
+      line-height: 1.8;
+    }
+
+    .purple {
+      color: #c084fc;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .skill-box {
+      padding: 15px 28px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: 0.3s;
+    }
+
+    .skill-box:hover {
+      transform: scale(1.08);
+    }
+
+    .contact {
+      background: linear-gradient(to right, #1e1b4b, #050816);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #9ca3af;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    @media(max-width:900px) {
+
+      .grid-2,
+      .grid-3,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 50px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      section {
+        padding: 80px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+
+  <nav>
+
+    <div class="nav-container">
+
+      <div class="logo">
+        Amirtha Varshini S
+      </div>
+
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+    </div>
+
+  </nav>
+
+  <!-- Hero Section -->
+
+  <section class="hero">
+
+    <div class="hero-container">
+
+      <p class="tag">Portfolio Website</p>
+
+      <h1>
+        Amirtha Varshini
+        <span class="gradient-text">S</span>
+      </h1>
+
+      <p>
+        Enthusiastic Computer Science and Engineering student with a strong
+        interest in software development, IoT systems, and data analytics.
+        Passionate about learning modern technologies and building practical
+        solutions through projects and teamwork.
+      </p>
+
+      <div class="buttons">
+
+        <a href="#projects" class="btn btn-primary">
+          View Projects
+        </a>
+
+        <a href="#contact" class="btn btn-outline">
+          Contact Me
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- About -->
+
+  <section id="about">
+
+    <div class="container">
+
+      <div class="grid-2">
+
+        <div class="card">
+
+          <h2 class="section-title" style="font-size:35px; margin-bottom:25px;">
+            About Me
+          </h2>
+
+          <p>
+            Motivated Computer Science Engineering student interested in
+            software development, IoT systems, and problem solving.
+            I enjoy learning new technologies and applying my knowledge
+            through academic and practical projects.
+          </p>
+
+        </div>
+
+        <div class="card">
+
+          <h2 class="section-title" style="font-size:35px; margin-bottom:25px;">
+            Education
+          </h2>
+
+          <h3>B.E Computer Science and Engineering</h3>
+
+          <p class="purple">
+            Velammal College of Engineering and Technology
+          </p>
+
+          <br>
+
+          <p>2023 – 2027</p>
+          <p>CGPA: 8.7 (Up to V Semester)</p>
+
+          <br>
+
+          <h3>HSC</h3>
+
+          <p class="purple">
+            EBG Matriculation Higher Secondary School
+          </p>
+
+          <p>Percentage: 92.2%</p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Skills -->
+
+  <section id="skills">
+
+    <div class="container">
+
+      <h2 class="section-title">Skills</h2>
+
+      <div class="skills">
+
+        <div class="skill-box">Java</div>
+        <div class="skill-box">Python</div>
+        <div class="skill-box">SQL</div>
+        <div class="skill-box">HTML</div>
+        <div class="skill-box">CSS</div>
+        <div class="skill-box">Power BI</div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Projects -->
+
+  <section id="projects">
+
+    <div class="container">
+
+      <h2 class="section-title">Projects</h2>
+
+      <div class="grid-3">
+
+        <!-- Govt Scheme -->
+
+        <div class="card">
+
+          <h3>Government Scheme Eligibility Recommendation System</h3>
+
+          <p>
+            Developed a hybrid full-stack and data science web application
+            designed to recommend government schemes based on user eligibility.
+            The system analyses user details such as age, income, and occupation
+            using data analytics and a machine learning scoring algorithm to
+            provide personalized recommendations. The project also includes
+            secure user authentication, an admin dashboard, and scheme
+            management modules for efficient handling of welfare schemes.
+          </p>
+
+          <br>
+
+          <p class="purple">
+            Python • Flask • SQLite • Pandas • Scikit-learn
+          </p>
+
+        </div>
+
+        <!-- IoT -->
+
+        <div class="card">
+
+          <h3>Smart Room Monitoring and Control System</h3>
+
+          <p>
+            Developed an IoT-based monitoring system using ESP32, DHT11,
+            and MQ-2 sensors for real-time temperature and gas monitoring.
+            The system automatically controls appliances such as AC and
+            exhaust fans using relay modules and provides dashboard-based
+            live monitoring and alerts.
+          </p>
+
+          <br>
+
+          <p class="purple">
+            ESP32 • IoT • Sensors
+          </p>
+
+        </div>
+
+        <!-- Internship -->
+
+        <div class="card">
+
+          <h3>NEET PRIME Application</h3>
+
+          <p>
+            Worked on the NEET PRIME application during internship at
+            VINSUP Infotech. Developed features to support NEET aspirants
+            with personalized study and practice recommendations while
+            gaining exposure to software development workflows and teamwork.
+          </p>
+
+          <br>
+
+          <p class="purple">
+            Django • Web Development
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Certifications -->
+
+  <section id="certifications">
+
+  <div class="container">
+
+    <h2 class="section-title">Certifications</h2>
+
+    <div class="grid-3">
+
+      <div class="card">
+        <h3>NPTEL - Programming in C</h3>
+      </div>
+
+      <div class="card">
+        <h3>Microsoft - Power BI</h3>
+      </div>
+
+      <div class="card">
+        <h3>Cisco - Introduction to Cyber Security</h3>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+  <!-- Contact -->
+
+  <section id="contact" class="contact">
+
+    <div class="container">
+
+      <h2 class="section-title">
+        Let's Connect
+      </h2>
+
+      <div class="contact-grid">
+
+        <div class="card">
+
+          <h3>Email</h3>
+
+          <p>
+            amirthavarshiniscse@gmail.com
+          </p>
+
+        </div>
+
+        <div class="card">
+
+          <h3>LinkedIn</h3>
+
+          <p>
+            <a href="https://www.linkedin.com/in/amirtha-varshini-s-82a6322a7/" target="_blank">
+              linkedin.com/in/amirtha-varshini-s-82a6322a7
+            </a>
+          </p>
+
+        </div>
+
+        <div class="card">
+
+          <h3>GitHub</h3>
+
+          <p>
+            <a href="https://github.com/Amirtha-06" target="_blank">
+              github.com/Amirtha-06
+            </a>
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+
+  <footer>
+    © 2026 Amirtha Varshini S | Portfolio Website
+  </footer>
+
+</body>
+
+</html>
