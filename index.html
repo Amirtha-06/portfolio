@@ -8,252 +8,291 @@
   <title>Amirtha Varshini Portfolio</title>
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
     }
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #050816;
-      color: white;
-      overflow-x: hidden;
+    body{
+      font-family:Arial, Helvetica, sans-serif;
+      background:#050816;
+      color:white;
+      overflow-x:hidden;
     }
 
-    a {
-      text-decoration: none;
-      color: white;
+    a{
+      text-decoration:none;
+      color:white;
     }
 
-    nav {
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 1000;
-      background: rgba(0, 0, 0, 0.5);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    nav{
+      position:fixed;
+      width:100%;
+      top:0;
+      z-index:1000;
+      background:rgba(0,0,0,0.5);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid rgba(255,255,255,0.1);
     }
 
-    .nav-container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    .nav-container{
+      max-width:1200px;
+      margin:auto;
+      padding:20px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
     }
 
-    .logo {
-      font-size: 28px;
-      font-weight: bold;
-      color: #c084fc;
+    .logo{
+      font-size:28px;
+      font-weight:bold;
+      color:#c084fc;
     }
 
-    .nav-links {
-      display: flex;
-      gap: 25px;
+    .nav-links{
+      display:flex;
+      gap:25px;
     }
 
-    .nav-links a {
-      color: #d1d5db;
-      transition: 0.3s;
+    .nav-links a{
+      color:#d1d5db;
+      transition:0.3s;
     }
 
-    .nav-links a:hover {
-      color: #c084fc;
+    .nav-links a:hover{
+      color:#c084fc;
     }
 
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 120px 40px 80px;
-      background: linear-gradient(to bottom right, #1e1b4b, #050816, #3b0764);
-      text-align: center;
+    /* HERO */
+
+    .hero{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:120px 40px 80px;
+      background:linear-gradient(to bottom right,#1e1b4b,#050816,#3b0764);
+      text-align:center;
     }
 
-    .hero-container {
-      max-width: 1000px;
+    .hero-container{
+      max-width:1000px;
     }
 
-    .tag {
-      color: #c084fc;
-      letter-spacing: 4px;
-      margin-bottom: 20px;
-      text-transform: uppercase;
-      font-size: 14px;
+    .tag{
+      color:#c084fc;
+      letter-spacing:4px;
+      margin-bottom:20px;
+      text-transform:uppercase;
+      font-size:14px;
     }
 
-    .hero h1 {
-      font-size: 75px;
-      margin-bottom: 25px;
-      line-height: 1.1;
+    .hero h1{
+      font-size:75px;
+      margin-bottom:25px;
+      line-height:1.1;
     }
 
-    .gradient-text {
-      background: linear-gradient(to right, #c084fc, #ec4899);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+    .gradient-text{
+      background:linear-gradient(to right,#c084fc,#ec4899);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
     }
 
-    .hero p {
-      font-size: 22px;
-      color: #d1d5db;
-      line-height: 1.8;
-      margin-bottom: 40px;
+    .hero p{
+      font-size:22px;
+      color:#d1d5db;
+      line-height:1.8;
+      margin-bottom:40px;
     }
 
-    .buttons {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
+    .buttons{
+      display:flex;
+      justify-content:center;
+      gap:20px;
+      flex-wrap:wrap;
     }
 
-    .btn {
-      padding: 15px 30px;
-      border-radius: 16px;
-      font-weight: bold;
-      transition: 0.3s;
+    .btn{
+      padding:15px 30px;
+      border-radius:16px;
+      font-weight:bold;
+      transition:0.3s;
     }
 
-    .btn-primary {
-      background: linear-gradient(to right, #a855f7, #ec4899);
+    .btn-primary{
+      background:linear-gradient(to right,#a855f7,#ec4899);
     }
 
-    .btn-primary:hover {
-      transform: scale(1.05);
+    .btn-primary:hover{
+      transform:scale(1.05);
     }
 
-    .btn-outline {
-      border: 1px solid gray;
+    .btn-outline{
+      border:1px solid gray;
     }
 
-    .btn-outline:hover {
-      background: white;
-      color: black;
+    .btn-outline:hover{
+      background:white;
+      color:black;
     }
 
-    section {
-      padding: 100px 40px;
+    section{
+      padding:100px 40px;
     }
 
-    .container {
-      max-width: 1200px;
-      margin: auto;
+    .container{
+      max-width:1200px;
+      margin:auto;
     }
 
-    .section-title {
-      text-align: center;
-      font-size: 48px;
-      margin-bottom: 70px;
+    .section-title{
+      text-align:center;
+      font-size:48px;
+      margin-bottom:70px;
     }
 
-    .grid-2 {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
+    .grid-2{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:40px;
     }
 
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 35px;
+    .grid-3{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:35px;
     }
 
-    .card {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 30px;
-      padding: 35px;
-      backdrop-filter: blur(10px);
-      transition: 0.3s;
+    .card{
+      background:rgba(255,255,255,0.05);
+      border:1px solid rgba(255,255,255,0.1);
+      border-radius:30px;
+      padding:35px;
+      backdrop-filter:blur(10px);
+      transition:0.3s;
     }
 
-    .card:hover {
-      transform: translateY(-10px);
+    .card:hover{
+      transform:translateY(-10px);
     }
 
-    .card h3 {
-      font-size: 25px;
-      margin-bottom: 15px;
+    .card h3{
+      font-size:25px;
+      margin-bottom:15px;
     }
 
-    .card p {
-      color: #d1d5db;
-      line-height: 1.8;
+    .card p{
+      color:#d1d5db;
+      line-height:1.8;
     }
 
-    .purple {
-      color: #c084fc;
+    .purple{
+      color:#c084fc;
     }
 
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
+    /* SKILLS */
+
+    .skills{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:20px;
     }
 
-    .skill-box {
-      padding: 15px 28px;
-      border-radius: 20px;
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      transition: 0.3s;
+    .skill-box{
+      padding:15px 28px;
+      border-radius:20px;
+      background:rgba(255,255,255,0.05);
+      border:1px solid rgba(255,255,255,0.1);
+      transition:0.3s;
     }
 
-    .skill-box:hover {
-      transform: scale(1.08);
+    .skill-box:hover{
+      transform:scale(1.08);
     }
 
-    .contact {
-      background: linear-gradient(to right, #1e1b4b, #050816);
+    /* CERTIFICATIONS */
+
+    .certificate-card{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:20px;
     }
 
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 30px;
+    .view-btn{
+      background:linear-gradient(to right,#a855f7,#ec4899);
+      border:none;
+      color:white;
+      padding:14px 24px;
+      border-radius:15px;
+      font-weight:bold;
+      cursor:pointer;
+      transition:0.3s;
     }
 
-    footer {
-      text-align: center;
-      padding: 30px;
-      color: #9ca3af;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    .view-btn:hover{
+      transform:scale(1.05);
     }
 
-    @media(max-width:900px) {
+    /* CONTACT */
+
+    .contact{
+      background:linear-gradient(to right,#1e1b4b,#050816);
+    }
+
+    .contact-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:30px;
+    }
+
+    footer{
+      text-align:center;
+      padding:30px;
+      color:#9ca3af;
+      border-top:1px solid rgba(255,255,255,0.1);
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:900px){
 
       .grid-2,
       .grid-3,
-      .contact-grid {
-        grid-template-columns: 1fr;
+      .contact-grid{
+        grid-template-columns:1fr;
       }
 
-      .hero h1 {
-        font-size: 50px;
+      .hero h1{
+        font-size:50px;
       }
 
-      .nav-links {
-        display: none;
+      .nav-links{
+        display:none;
       }
 
-      section {
-        padding: 80px 20px;
+      .certificate-card{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+
+      section{
+        padding:80px 20px;
       }
     }
+
   </style>
 </head>
 
 <body>
 
-  <!-- Navbar -->
+  <!-- NAVBAR -->
 
   <nav>
 
@@ -275,7 +314,7 @@
 
   </nav>
 
-  <!-- Hero Section -->
+  <!-- HERO -->
 
   <section class="hero">
 
@@ -289,10 +328,10 @@
       </h1>
 
       <p>
-        Enthusiastic Computer Science and Engineering student with a strong
-        interest in software development, IoT systems, and data analytics.
-        Passionate about learning modern technologies and building practical
-        solutions through projects and teamwork.
+        Motivated individual seeking an opportunity to apply my skills,
+        learn continuously, and contribute to meaningful projects in a
+        dynamic environment with strong interest in software development,
+        AI, and modern web technologies.
       </p>
 
       <div class="buttons">
@@ -311,7 +350,7 @@
 
   </section>
 
-  <!-- About -->
+  <!-- ABOUT -->
 
   <section id="about">
 
@@ -326,10 +365,11 @@
           </h2>
 
           <p>
-            Motivated Computer Science Engineering student interested in
-            software development, IoT systems, and problem solving.
-            I enjoy learning new technologies and applying my knowledge
-            through academic and practical projects.
+            Enthusiastic Computer Science Engineering student interested in
+            software development, AI, analytics, and modern web technologies.
+            Passionate about learning new concepts, improving technical skills,
+            and developing practical solutions through academic projects and
+            teamwork.
           </p>
 
         </div>
@@ -349,7 +389,7 @@
           <br>
 
           <p>2023 – 2027</p>
-          <p>CGPA: 8.7 (Up to V Semester)</p>
+          <p>CGPA: 8.7</p>
 
           <br>
 
@@ -369,7 +409,7 @@
 
   </section>
 
-  <!-- Skills -->
+  <!-- SKILLS -->
 
   <section id="skills">
 
@@ -392,7 +432,7 @@
 
   </section>
 
-  <!-- Projects -->
+  <!-- PROJECTS -->
 
   <section id="projects">
 
@@ -402,69 +442,65 @@
 
       <div class="grid-3">
 
-        <!-- Govt Scheme -->
+        <!-- PROJECT 1 -->
 
         <div class="card">
 
-          <h3>Government Scheme Eligibility Recommendation System</h3>
+          <h3>
+            Government Scheme Eligibility Recommendation System
+          </h3>
 
           <p>
-            Developed a hybrid full-stack and data science web application
-            designed to recommend government schemes based on user eligibility.
-            The system analyses user details such as age, income, and occupation
-            using data analytics and a machine learning scoring algorithm to
-            provide personalized recommendations. The project also includes
-            secure user authentication, an admin dashboard, and scheme
-            management modules for efficient handling of welfare schemes.
+            Web application developed to recommend suitable government
+            welfare schemes based on user eligibility details and data analysis.
           </p>
 
           <br>
 
           <p class="purple">
-            Python • Flask • SQLite • Pandas • Scikit-learn
+            Python • Flask • SQLite • Data Analytics
           </p>
 
         </div>
 
-        <!-- IoT -->
+        <!-- PROJECT 2 -->
 
         <div class="card">
 
-          <h3>Smart Room Monitoring and Control System</h3>
+          <h3>
+            Smart Room Monitoring and Control System
+          </h3>
 
           <p>
-            Developed an IoT-based monitoring system using ESP32, DHT11,
-            and MQ-2 sensors for real-time temperature and gas monitoring.
-            The system automatically controls appliances such as AC and
-            exhaust fans using relay modules and provides dashboard-based
-            live monitoring and alerts.
+            IoT-based smart monitoring system for real-time temperature
+            and gas detection with automated appliance control and alerts.
           </p>
 
           <br>
 
           <p class="purple">
-            ESP32 • IoT • Sensors
+            ESP32 • DHT11 • MQ-2 • Relay Module
           </p>
 
         </div>
 
-        <!-- Internship -->
+        <!-- PROJECT 3 -->
 
         <div class="card">
 
-          <h3>NEET PRIME Application</h3>
+          <h3>
+            NEET PRIME Application
+          </h3>
 
           <p>
-            Worked on the NEET PRIME application during internship at
-            VINSUP Infotech. Developed features to support NEET aspirants
-            with personalized study and practice recommendations while
-            gaining exposure to software development workflows and teamwork.
+            Web application developed to support NEET aspirants with learning
+            resources, practice tests, and performance management features.
           </p>
 
           <br>
 
           <p class="purple">
-            Django • Web Development
+            Django • Web Application
           </p>
 
         </div>
@@ -475,34 +511,121 @@
 
   </section>
 
-  <!-- Certifications -->
+  <!-- CERTIFICATIONS -->
 
   <section id="certifications">
 
-  <div class="container">
+    <div class="container">
 
-    <h2 class="section-title">Certifications</h2>
+      <h2 class="section-title">
+        Certifications
+      </h2>
 
-    <div class="grid-3">
+      <div class="grid-2">
 
-      <div class="card">
-        <h3>NPTEL - Programming in C</h3>
-      </div>
+        <!-- CERTIFICATE 1 -->
 
-      <div class="card">
-        <h3>Microsoft - Power BI</h3>
-      </div>
+        <div class="card certificate-card">
 
-      <div class="card">
-        <h3>Cisco - Introduction to Cyber Security</h3>
+          <div>
+
+            <h3>
+              NPTEL - Programming in C
+            </h3>
+
+            <p>
+              Programming fundamentals and problem solving concepts.
+            </p>
+
+          </div>
+
+          <a href="https://drive.google.com/file/d/1A5oK_1uNYnUcGeT4eIqrLd39tCSID5z7/view?usp=drivesdk" target="_blank">
+            <button class="view-btn">
+              View
+            </button>
+          </a>
+
+        </div>
+
+        <!-- CERTIFICATE 2 -->
+
+        <div class="card certificate-card">
+
+          <div>
+
+            <h3>
+              Microsoft - Power BI
+            </h3>
+
+            <p>
+              Data visualization and business analytics concepts.
+            </p>
+
+          </div>
+
+          <a href="https://drive.google.com/file/d/1tGTvh9ZSGXLuGbOxN3bvQzTvKdN1OChp/view?usp=drivesdk" target="_blank">
+            <button class="view-btn">
+              View
+            </button>
+          </a>
+
+        </div>
+
+        <!-- CERTIFICATE 3 -->
+
+        <div class="card certificate-card">
+
+          <div>
+
+            <h3>
+              Deloitte - Data Analytics Job Simulation
+            </h3>
+
+            <p>
+              Hands-on exposure to analytics and data interpretation.
+            </p>
+
+          </div>
+
+          <a href="https://drive.google.com/file/d/12ZxGgnBdykFQy2ljikZU6B_szlbFVBUM/view?usp=drivesdk" target="_blank">
+            <button class="view-btn">
+              View
+            </button>
+          </a>
+
+        </div>
+
+        <!-- CERTIFICATE 4 -->
+
+        <div class="card certificate-card">
+
+          <div>
+
+            <h3>
+              Cisco - Introduction to Cyber Security
+            </h3>
+
+            <p>
+              Basic concepts of cyber security and online safety.
+            </p>
+
+          </div>
+
+          <a href="https://drive.google.com/file/d/1K01NRsib83yKkoACDSxyHBMpVozbBDf2/view?usp=drivesdk" target="_blank">
+            <button class="view-btn">
+              View
+            </button>
+          </a>
+
+        </div>
+
       </div>
 
     </div>
 
-  </div>
+  </section>
 
-</section>
-  <!-- Contact -->
+  <!-- CONTACT -->
 
   <section id="contact" class="contact">
 
@@ -554,7 +677,7 @@
 
   </section>
 
-  <!-- Footer -->
+  <!-- FOOTER -->
 
   <footer>
     © 2026 Amirtha Varshini S | Portfolio Website
