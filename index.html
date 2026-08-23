@@ -4,685 +4,418 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Amirtha Varshini S - Computer Science & Engineering Student, Software Developer, AI & Data Enthusiast." />
+  <title>Amirtha Varshini S | Developer Portfolio</title>
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <title>Amirtha Varshini Portfolio</title>
-
-  <style>
-
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      scroll-behavior:smooth;
-    }
-
-    body{
-      font-family:Arial, Helvetica, sans-serif;
-      background:#050816;
-      color:white;
-      overflow-x:hidden;
-    }
-
-    a{
-      text-decoration:none;
-      color:white;
-    }
-
-    nav{
-      position:fixed;
-      width:100%;
-      top:0;
-      z-index:1000;
-      background:rgba(0,0,0,0.5);
-      backdrop-filter:blur(10px);
-      border-bottom:1px solid rgba(255,255,255,0.1);
-    }
-
-    .nav-container{
-      max-width:1200px;
-      margin:auto;
-      padding:20px;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-    }
-
-    .logo{
-      font-size:28px;
-      font-weight:bold;
-      color:#c084fc;
-    }
-
-    .nav-links{
-      display:flex;
-      gap:25px;
-    }
-
-    .nav-links a{
-      color:#d1d5db;
-      transition:0.3s;
-    }
-
-    .nav-links a:hover{
-      color:#c084fc;
-    }
-
-    /* HERO */
-
-    .hero{
-      min-height:100vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:120px 40px 80px;
-      background:linear-gradient(to bottom right,#1e1b4b,#050816,#3b0764);
-      text-align:center;
-    }
-
-    .hero-container{
-      max-width:1000px;
-    }
-
-    .tag{
-      color:#c084fc;
-      letter-spacing:4px;
-      margin-bottom:20px;
-      text-transform:uppercase;
-      font-size:14px;
-    }
-
-    .hero h1{
-      font-size:75px;
-      margin-bottom:25px;
-      line-height:1.1;
-    }
-
-    .gradient-text{
-      background:linear-gradient(to right,#c084fc,#ec4899);
-      -webkit-background-clip:text;
-      -webkit-text-fill-color:transparent;
-    }
-
-    .hero p{
-      font-size:22px;
-      color:#d1d5db;
-      line-height:1.8;
-      margin-bottom:40px;
-    }
-
-    .buttons{
-      display:flex;
-      justify-content:center;
-      gap:20px;
-      flex-wrap:wrap;
-    }
-
-    .btn{
-      padding:15px 30px;
-      border-radius:16px;
-      font-weight:bold;
-      transition:0.3s;
-    }
-
-    .btn-primary{
-      background:linear-gradient(to right,#a855f7,#ec4899);
-    }
-
-    .btn-primary:hover{
-      transform:scale(1.05);
-    }
-
-    .btn-outline{
-      border:1px solid gray;
-    }
-
-    .btn-outline:hover{
-      background:white;
-      color:black;
-    }
-
-    section{
-      padding:100px 40px;
-    }
-
-    .container{
-      max-width:1200px;
-      margin:auto;
-    }
-
-    .section-title{
-      text-align:center;
-      font-size:48px;
-      margin-bottom:70px;
-    }
-
-    .grid-2{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:40px;
-    }
-
-    .grid-3{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:35px;
-    }
-
-    .card{
-      background:rgba(255,255,255,0.05);
-      border:1px solid rgba(255,255,255,0.1);
-      border-radius:30px;
-      padding:35px;
-      backdrop-filter:blur(10px);
-      transition:0.3s;
-    }
-
-    .card:hover{
-      transform:translateY(-10px);
-    }
-
-    .card h3{
-      font-size:25px;
-      margin-bottom:15px;
-    }
-
-    .card p{
-      color:#d1d5db;
-      line-height:1.8;
-    }
-
-    .purple{
-      color:#c084fc;
-    }
-
-    /* SKILLS */
-
-    .skills{
-      display:flex;
-      flex-wrap:wrap;
-      justify-content:center;
-      gap:20px;
-    }
-
-    .skill-box{
-      padding:15px 28px;
-      border-radius:20px;
-      background:rgba(255,255,255,0.05);
-      border:1px solid rgba(255,255,255,0.1);
-      transition:0.3s;
-    }
-
-    .skill-box:hover{
-      transform:scale(1.08);
-    }
-
-    /* CERTIFICATIONS */
-
-    .certificate-card{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:20px;
-    }
-
-    .view-btn{
-      background:linear-gradient(to right,#a855f7,#ec4899);
-      border:none;
-      color:white;
-      padding:14px 24px;
-      border-radius:15px;
-      font-weight:bold;
-      cursor:pointer;
-      transition:0.3s;
-    }
-
-    .view-btn:hover{
-      transform:scale(1.05);
-    }
-
-    /* CONTACT */
-
-    .contact{
-      background:linear-gradient(to right,#1e1b4b,#050816);
-    }
-
-    .contact-grid{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:30px;
-    }
-
-    footer{
-      text-align:center;
-      padding:30px;
-      color:#9ca3af;
-      border-top:1px solid rgba(255,255,255,0.1);
-    }
-
-    /* RESPONSIVE */
-
-    @media(max-width:900px){
-
-      .grid-2,
-      .grid-3,
-      .contact-grid{
-        grid-template-columns:1fr;
-      }
-
-      .hero h1{
-        font-size:50px;
-      }
-
-      .nav-links{
-        display:none;
-      }
-
-      .certificate-card{
-        flex-direction:column;
-        align-items:flex-start;
-      }
-
-      section{
-        padding:80px 20px;
-      }
-    }
-
-  </style>
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
   <!-- NAVBAR -->
-
-  <nav>
-
+  <nav id="navbar">
     <div class="nav-container">
+      <a href="#home" class="logo">
+        <i class="fa-solid fa-code"></i> Amirtha Varshini S
+      </a>
 
-      <div class="logo">
-        Amirtha Varshini S
-      </div>
+      <button class="hamburger" id="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+      </button>
 
-      <div class="nav-links">
+      <div class="nav-links" id="nav-links">
+        <a href="#home">Home</a>
         <a href="#about">About</a>
+        <a href="#experience">Experience</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
         <a href="#certifications">Certifications</a>
         <a href="#contact">Contact</a>
       </div>
-
     </div>
-
   </nav>
 
-  <!-- HERO -->
-
-  <section class="hero">
-
+  <!-- HERO SECTION -->
+  <section class="hero" id="home">
     <div class="hero-container">
-
-      <p class="tag">Portfolio Website</p>
+      <span class="tag">TURNING IDEAS INTO APPLICATIONS</span>
 
       <h1>
-        Amirtha Varshini
-        <span class="gradient-text">S</span>
+        AMIRTHA VARSHINI <span class="gradient-text">S</span>
       </h1>
 
-      <p>
-        Motivated individual seeking an opportunity to apply my skills,
-        learn continuously, and contribute to meaningful projects in a
-        dynamic environment with strong interest in software development,
-        AI, and modern web technologies.
+      <div class="hero-role">
+        Computer Science Engineering Student &nbsp;|&nbsp; Software Developer &nbsp;|&nbsp; AI & Data Enthusiast
+      </div>
+
+      <p class="hero-description">
+        Passionate about learning, building, and turning ideas into meaningful software solutions.
       </p>
 
       <div class="buttons">
-
         <a href="#projects" class="btn btn-primary">
-          View Projects
+          <i class="fa-solid fa-folder-open"></i> View Projects
         </a>
 
-        <a href="#contact" class="btn btn-outline">
-          Contact Me
+        <a href="#" class="btn btn-outline download-resume-btn">
+          <i class="fa-solid fa-file-arrow-down"></i> Download Resume
         </a>
 
+        <a href="https://github.com/Amirtha-06" target="_blank" class="btn btn-outline">
+          <i class="fa-brands fa-github"></i> GitHub
+        </a>
+
+        <a href="https://www.linkedin.com/in/amirtha-varshini-s-82a6322a7/" target="_blank" class="btn btn-outline">
+          <i class="fa-brands fa-linkedin"></i> LinkedIn
+        </a>
       </div>
-
     </div>
-
   </section>
 
-  <!-- ABOUT -->
-
+  <!-- ABOUT SECTION -->
   <section id="about">
-
     <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">About Me</h2>
+        <p class="section-subtitle">Get to know my academic background & strengths</p>
+      </div>
 
-      <div class="grid-2">
-
-        <div class="card">
-
-          <h2 class="section-title" style="font-size:35px; margin-bottom:25px;">
-            About Me
-          </h2>
-
+      <div class="about-content">
+        <div class="card about-text-card">
           <p>
-            Enthusiastic Computer Science Engineering student interested in
-            software development, AI, analytics, and modern web technologies.
-            Passionate about learning new concepts, improving technical skills,
-            and developing practical solutions through academic projects and
-            teamwork.
+            I am a Computer Science & Engineering student with hands-on internship and project experience, interested in software development, AI, data and web technologies. Passionate about learning new concepts, analytical problem solving, and building robust real-world applications.
           </p>
 
+          <div class="highlights-grid">
+            <div class="highlight-box">
+              <div class="highlight-number">B.E. CSE</div>
+              <div class="highlight-label">Computer Science</div>
+            </div>
+            <div class="highlight-box">
+              <div class="highlight-number">8.67 / 10</div>
+              <div class="highlight-label">CGPA</div>
+            </div>
+            <div class="highlight-box">
+              <div class="highlight-number">2</div>
+              <div class="highlight-label">Internship Experiences</div>
+            </div>
+            <div class="highlight-box">
+              <div class="highlight-number">3</div>
+              <div class="highlight-label">Major Projects</div>
+            </div>
+          </div>
         </div>
 
+        <!-- EDUCATION INTEGRATED -->
         <div class="card">
-
-          <h2 class="section-title" style="font-size:35px; margin-bottom:25px;">
-            Education
-          </h2>
-
-          <h3>B.E Computer Science and Engineering</h3>
-
-          <p class="purple">
-            Velammal College of Engineering and Technology
-          </p>
-
-          <br>
-
-          <p>2023 – 2027</p>
-          <p>CGPA: 8.7</p>
-
-          <br>
-
-          <h3>HSC</h3>
-
-          <p class="purple">
-            EBG Matriculation Higher Secondary School
-          </p>
-
-          <p>Percentage: 92.2%</p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- SKILLS -->
-
-  <section id="skills">
-
-    <div class="container">
-
-      <h2 class="section-title">Skills</h2>
-
-      <div class="skills">
-
-        <div class="skill-box">Java</div>
-        <div class="skill-box">Python</div>
-        <div class="skill-box">SQL</div>
-        <div class="skill-box">HTML</div>
-        <div class="skill-box">CSS</div>
-        <div class="skill-box">Power BI</div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- PROJECTS -->
-
-  <section id="projects">
-
-    <div class="container">
-
-      <h2 class="section-title">Projects</h2>
-
-      <div class="grid-3">
-
-        <!-- PROJECT 1 -->
-
-        <div class="card">
-
-          <h3>
-            Government Scheme Eligibility Recommendation System
+          <h3 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 20px; color: var(--primary-purple);">
+            <i class="fa-solid fa-graduation-cap"></i> Education
           </h3>
 
-          <p>
-            Web application developed to recommend suitable government
-            welfare schemes based on user eligibility details and data analysis.
+          <div class="education-section">
+            <div class="education-item">
+              <h4>B.E. – Computer Science & Engineering</h4>
+              <div class="education-institution">Velammal College of Engineering and Technology, Madurai</div>
+              <div class="education-meta">2023 – 2027 &nbsp;|&nbsp; <strong>CGPA: 8.67 / 10</strong></div>
+            </div>
+
+            <div class="education-item">
+              <h4>HSC (Class XII)</h4>
+              <div class="education-institution">EBG Matriculation Higher Secondary School, Madurai</div>
+              <div class="education-meta">2022 – 2023 &nbsp;|&nbsp; <strong>92.2%</strong></div>
+            </div>
+
+            <div class="education-item">
+              <h4>SSLC (Class X)</h4>
+              <div class="education-institution">EBG Matriculation Higher Secondary School, Madurai</div>
+              <div class="education-meta">2020 – 2021 &nbsp;|&nbsp; <strong>Passed</strong></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE SECTION -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Work Experience</h2>
+        <p class="section-subtitle">Hands-on internships and industry exposure</p>
+      </div>
+
+      <div class="timeline">
+        <!-- EXPERIENCE 1 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <div class="role-title">AI Intern</div>
+                <div class="company-name">VINSUP Infotech Pvt. Ltd., Madurai</div>
+              </div>
+              <div class="timeline-date">May – Jun 2025</div>
+            </div>
+
+            <ul class="timeline-responsibilities">
+              <li>Built NEET PRIME personalized study recommendation web application using Django, HTML/CSS and Django ORM.</li>
+              <li>Designed database models and REST API endpoints.</li>
+              <li>Implemented user authentication and session management.</li>
+              <li>Worked on adaptive study plan logic.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- EXPERIENCE 2 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <div class="role-title">AI & IoT Intern</div>
+                <div class="company-name">POLENZA Tech Solutions, Chennai</div>
+              </div>
+              <div class="timeline-date">Dec 2024</div>
+            </div>
+
+            <ul class="timeline-responsibilities">
+              <li>Explored AI model integration with IoT sensor pipelines.</li>
+              <li>Worked with data collection, real-time processing and embedded system communication concepts.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS SECTION -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Technical Skills</h2>
+        <p class="section-subtitle">Categorized view of technical proficiencies</p>
+      </div>
+
+      <div class="skills-category-grid">
+        <!-- Programming Languages -->
+        <div class="skill-category-card">
+          <h3><i class="fa-solid fa-code"></i> Programming Languages</h3>
+          <div class="skill-badges">
+            <span class="skill-badge">Python</span>
+            <span class="skill-badge">Java</span>
+            <span class="skill-badge">SQL</span>
+            <span class="skill-badge">HTML</span>
+            <span class="skill-badge">CSS</span>
+          </div>
+        </div>
+
+        <!-- Frameworks & Development -->
+        <div class="skill-category-card">
+          <h3><i class="fa-solid fa-layer-group"></i> Frameworks & Development</h3>
+          <div class="skill-badges">
+            <span class="skill-badge">Django</span>
+            <span class="skill-badge">Flask</span>
+          </div>
+        </div>
+
+        <!-- Database -->
+        <div class="skill-category-card">
+          <h3><i class="fa-solid fa-database"></i> Database</h3>
+          <div class="skill-badges">
+            <span class="skill-badge">MySQL</span>
+            <span class="skill-badge">SQLite</span>
+          </div>
+        </div>
+
+        <!-- Data & Analytics -->
+        <div class="skill-category-card">
+          <h3><i class="fa-solid fa-chart-pie"></i> Data & Analytics</h3>
+          <div class="skill-badges">
+            <span class="skill-badge">Power BI</span>
+            <span class="skill-badge">Excel</span>
+          </div>
+        </div>
+
+        <!-- Tools -->
+        <div class="skill-category-card">
+          <h3><i class="fa-solid fa-wrench"></i> Tools</h3>
+          <div class="skill-badges">
+            <span class="skill-badge">Git</span>
+            <span class="skill-badge">GitHub</span>
+            <span class="skill-badge">Visual Studio Code</span>
+            <span class="skill-badge">NetBeans</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS SECTION -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Key Projects</h2>
+        <p class="section-subtitle">Practical applications & engineering projects</p>
+      </div>
+
+      <div class="grid-3">
+        <!-- PROJECT 1 -->
+        <div class="card project-card">
+          <h3>Government Scheme Recommendation System</h3>
+          
+          <p class="project-description">
+            Built an eligibility matching system that recommends government welfare schemes based on user eligibility details.
           </p>
 
-          <br>
+          <div class="project-features">
+            <h4>Key Features</h4>
+            <ul>
+              <li>Eligibility matching engine</li>
+              <li>User profiles & scheme records</li>
+              <li>User & Admin login systems</li>
+              <li>Admin panel to add/edit/delete schemes</li>
+            </ul>
+          </div>
 
-          <p class="purple">
-            Python • Flask • SQLite • Data Analytics
-          </p>
-
+          <div class="project-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Flask</span>
+            <span class="tech-tag">SQL</span>
+            <span class="tech-tag">HTML</span>
+            <span class="tech-tag">CSS</span>
+          </div>
         </div>
 
         <!-- PROJECT 2 -->
+        <div class="card project-card">
+          <h3>NEET PRIME Web Application</h3>
+          <span class="project-badge">Internship Project @ VINSUP Infotech</span>
 
-        <div class="card">
-
-          <h3>
-            Smart Room Monitoring and Control System
-          </h3>
-
-          <p>
-            IoT-based smart monitoring system for real-time temperature
-            and gas detection with automated appliance control and alerts.
+          <p class="project-description">
+            End-to-end ed-tech platform with personalized practice recommendations, performance dashboards, and adaptive study plans.
           </p>
 
-          <br>
+          <div class="project-features">
+            <h4>Key Features</h4>
+            <ul>
+              <li>Personalized practice recommendations</li>
+              <li>Interactive performance dashboard</li>
+              <li>Adaptive study plans</li>
+            </ul>
+          </div>
 
-          <p class="purple">
-            ESP32 • DHT11 • MQ-2 • Relay Module
-          </p>
-
+          <div class="project-tech">
+            <span class="tech-tag">Django</span>
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">pandas</span>
+            <span class="tech-tag">HTML</span>
+            <span class="tech-tag">CSS</span>
+          </div>
         </div>
 
         <!-- PROJECT 3 -->
+        <div class="card project-card">
+          <h3>Smart Room Monitoring & Control System</h3>
 
-        <div class="card">
-
-          <h3>
-            NEET PRIME Application
-          </h3>
-
-          <p>
-            Web application developed to support NEET aspirants with learning
-            resources, practice tests, and performance management features.
+          <p class="project-description">
+            Developed an IoT-based smart monitoring system for real-time temperature and gas detection with automated appliance control and alert generation.
           </p>
 
-          <br>
+          <div class="project-features">
+            <h4>Key Features</h4>
+            <ul>
+              <li>Real-time temperature monitoring</li>
+              <li>Gas detection & safety sensor integration</li>
+              <li>Automated appliance control</li>
+              <li>Alert generation system</li>
+            </ul>
+          </div>
 
-          <p class="purple">
-            Django • Web Application
-          </p>
-
+          <div class="project-tech">
+            <span class="tech-tag">ESP32</span>
+            <span class="tech-tag">DHT11</span>
+            <span class="tech-tag">MQ-2</span>
+            <span class="tech-tag">Relay Module</span>
+          </div>
         </div>
-
       </div>
-
     </div>
-
   </section>
 
-  <!-- CERTIFICATIONS -->
-
+  <!-- CERTIFICATIONS SECTION -->
   <section id="certifications">
-
     <div class="container">
-
-      <h2 class="section-title">
-        Certifications
-      </h2>
-
-      <div class="grid-2">
-
-        <!-- CERTIFICATE 1 -->
-
-        <div class="card certificate-card">
-
-          <div>
-
-            <h3>
-              NPTEL - Programming in C
-            </h3>
-
-            <p>
-              Programming fundamentals and problem solving concepts.
-            </p>
-
-          </div>
-
-          <a href="https://drive.google.com/file/d/1A5oK_1uNYnUcGeT4eIqrLd39tCSID5z7/view?usp=drivesdk" target="_blank">
-            <button class="view-btn">
-              View
-            </button>
-          </a>
-
-        </div>
-
-        <!-- CERTIFICATE 2 -->
-
-        <div class="card certificate-card">
-
-          <div>
-
-            <h3>
-              Microsoft - Power BI
-            </h3>
-
-            <p>
-              Data visualization and business analytics concepts.
-            </p>
-
-          </div>
-
-          <a href="https://drive.google.com/file/d/1tGTvh9ZSGXLuGbOxN3bvQzTvKdN1OChp/view?usp=drivesdk" target="_blank">
-            <button class="view-btn">
-              View
-            </button>
-          </a>
-
-        </div>
-
-        <!-- CERTIFICATE 3 -->
-
-        <div class="card certificate-card">
-
-          <div>
-
-            <h3>
-              Deloitte - Data Analytics Job Simulation
-            </h3>
-
-            <p>
-              Hands-on exposure to analytics and data interpretation.
-            </p>
-
-          </div>
-
-          <a href="https://drive.google.com/file/d/12ZxGgnBdykFQy2ljikZU6B_szlbFVBUM/view?usp=drivesdk" target="_blank">
-            <button class="view-btn">
-              View
-            </button>
-          </a>
-
-        </div>
-
-        <!-- CERTIFICATE 4 -->
-
-        <div class="card certificate-card">
-
-          <div>
-
-            <h3>
-              Cisco - Introduction to Cyber Security
-            </h3>
-
-            <p>
-              Basic concepts of cyber security and online safety.
-            </p>
-
-          </div>
-
-          <a href="https://drive.google.com/file/d/1K01NRsib83yKkoACDSxyHBMpVozbBDf2/view?usp=drivesdk" target="_blank">
-            <button class="view-btn">
-              View
-            </button>
-          </a>
-
-        </div>
-
+      <div class="section-header">
+        <h2 class="section-title">Certifications</h2>
+        <p class="section-subtitle">Data-driven, customizable credentials listing</p>
       </div>
 
-    </div>
+      <!-- Dynamic Certification Container populated by data/certifications.js -->
+      <div class="cert-grid" id="certifications-container">
+        <!-- Rendered dynamically -->
+      </div>
 
+      <button class="btn btn-outline toggle-cert-btn" id="toggle-cert-btn">
+        View All Certifications
+      </button>
+    </div>
   </section>
 
-  <!-- CONTACT -->
-
-  <section id="contact" class="contact">
-
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="contact-section">
     <div class="container">
-
-      <h2 class="section-title">
-        Let's Connect
-      </h2>
+      <div class="section-header">
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-subtitle">Let's connect for software development, AI & data role opportunities</p>
+      </div>
 
       <div class="contact-grid">
-
-        <div class="card">
-
+        <div class="card contact-card">
+          <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
           <h3>Email</h3>
-
-          <p>
-            amirthavarshiniscse@gmail.com
-          </p>
-
+          <p><a href="mailto:amirthavarshiniscse@gmail.com">amirthavarshiniscse@gmail.com</a></p>
         </div>
 
-        <div class="card">
-
+        <div class="card contact-card">
+          <div class="contact-icon"><i class="fa-brands fa-linkedin"></i></div>
           <h3>LinkedIn</h3>
-
           <p>
-            <a href="https://www.linkedin.com/in/amirtha-varshini-s-82a6322a7/" target="_blank">
+            <a href="https://www.linkedin.com/in/amirtha-varshini-s-82a6322a7/" target="_blank" rel="noopener noreferrer">
               linkedin.com/in/amirtha-varshini-s-82a6322a7
             </a>
           </p>
-
         </div>
 
-        <div class="card">
-
+        <div class="card contact-card">
+          <div class="contact-icon"><i class="fa-brands fa-github"></i></div>
           <h3>GitHub</h3>
-
           <p>
-            <a href="https://github.com/Amirtha-06" target="_blank">
+            <a href="https://github.com/Amirtha-06" target="_blank" rel="noopener noreferrer">
               github.com/Amirtha-06
             </a>
           </p>
-
         </div>
-
       </div>
-
     </div>
-
   </section>
 
   <!-- FOOTER -->
-
   <footer>
-    © 2026 Amirtha Varshini S | Portfolio Website
+    <p>© 2026 Amirtha Varshini S | Developer Portfolio</p>
   </footer>
 
+  <!-- DATA & SCRIPTS -->
+  <script src="data/certifications.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
