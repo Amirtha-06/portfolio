@@ -9,14 +9,14 @@ const certificationsData = [
     issuer: "NASSCOM FutureSkills Prime",
     category: "Data Science",
     link: "https://drive.google.com/file/d/1Ap1hoQypQy4rI8I0CmWOxo6D73z6VYif/view?usp=drive_link",
-    featured: true
+    featured: false
   },
   {
     name: "NASSCOM FutureSkills Prime – AI & Machine Learning (Gold)",
     issuer: "NASSCOM FutureSkills Prime",
     category: "AI & ML",
     link: "https://drive.google.com/file/d/1Lrti7ePB5c4ExqeCii28k0fyqXd9hw60/view?usp=drive_link",
-    featured: true
+    featured: false
   },
   {
     name: "Microsoft – Power BI (Associate)",
@@ -37,7 +37,7 @@ const certificationsData = [
     issuer: "NPTEL / IIT",
     category: "Cloud Computing",
     link: "https://drive.google.com/file/d/1A5oK_1uNYnUcGeT4eIqrLd39tCSID5z7/view?usp=drivesdk",
-    featured: false
+    featured: true
   },
   {
     name: "Cisco Networking Academy – IoT with Packet Tracer",
@@ -52,6 +52,6 @@ const certificationsData = [
     issuer: "Cisco Networking Academy",
     category: "Cybersecurity",
     link: "https://drive.google.com/file/d/1K01NRsib83yKkoACDSxyHBMpVozbBDf2/view?usp=drive_link",
-    featured: false
+    featured: true
   }
 ];
