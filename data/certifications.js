@@ -16,7 +16,7 @@ const certificationsData = [
     issuer: "NASSCOM FutureSkills Prime",
     category: "AI & ML",
     link: "https://drive.google.com/file/d/1Lrti7ePB5c4ExqeCii28k0fyqXd9hw60/view?usp=drive_link",
-    featured: false
+    featured: true
   },
   {
     name: "Microsoft – Power BI (Associate)",
@@ -44,7 +44,7 @@ const certificationsData = [
     issuer: "Cisco Networking Academy",
     category: "IoT & Networking",
     link: "https://drive.google.com/file/d/1K01NRsib83yKkoACDSxyHBMpVozbBDf2/view?usp=drivesdk",
-    featured: false
+    featured: true
   },
   
   {
@@ -52,6 +52,6 @@ const certificationsData = [
     issuer: "Cisco Networking Academy",
     category: "Cybersecurity",
     link: "https://drive.google.com/file/d/1K01NRsib83yKkoACDSxyHBMpVozbBDf2/view?usp=drive_link",
-    featured: true
+    featured: false
   }
 ];
